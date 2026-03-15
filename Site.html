@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <title>EcoTech - Reciclagem de Computadores</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+ 
+
+<header>
+    <h1>EcoTech</h1>
+    <p>Soluções sustentáveis para o descarte de computadores</p>
+
+    <nav>
+        <a href="Site.html">Início</a> |
+        <a href="#sobre">Sobre</a> |
+        <a href="#problema">Problema</a> |
+        <a href="#solucao">Soluções</a> |
+        <a href="#beneficios">Benefícios</a> |
+        <a href="contato.html">Contato</a>
+    </nav>
+</header>
+
+<section class="carrossel">
+
+<div class="slides">
+
+<img src="img/Gemini_Generated_Image_dfdxi8dfdxi8dfdx.png" class="slide">
+<img src="img/Design sem nome (5).png" class="slide">
+<img src="img/Gemini_Generated_Image_a3iz0ba3iz0ba3iz.png" class="slide">
+
+</div>
+
+<button class="anterior">&#10094;</button>
+<button class="proximo">&#10095;</button>
+
+</section>
+
+<hr>
+
+<main>
+
+<section id="sobre">
+
+<h2>Sobre a EcoTech</h2>
+
+<p>
+A EcoTech é uma empresa fictícia criada para conscientizar pessoas e empresas sobre o descarte correto
+de computadores e equipamentos eletrônicos.
+</p>
+
+<p>
+Com o crescimento da tecnologia, o número de equipamentos descartados aumenta todos os anos.
+Nosso objetivo é incentivar práticas sustentáveis e reduzir o impacto ambiental causado pelo lixo eletrônico.
+</p>
+
+</section>
+
+<hr>
+
+<section id="problema">
+
+<h2>O Problema do Lixo Eletrônico</h2>
+
+<p>
+O lixo eletrônico é um dos resíduos que mais crescem no mundo. Equipamentos como computadores,
+monitores, teclados e celulares possuem substâncias químicas que podem prejudicar o meio ambiente.
+</p>
+
+<p>
+Quando descartados de maneira incorreta, esses equipamentos podem contaminar o solo e a água,
+causando danos à natureza e à saúde das pessoas.
+</p>
+
+</section>
+
+<hr>
+
+<section id="solucao">
+
+<h2>O que fazer com computadores antigos?</h2>
+
+<ul>
+<li>Levar equipamentos para pontos de reciclagem eletrônica</li>
+<li>Doar computadores que ainda funcionam</li>
+<li>Reaproveitar peças como HD, memória e fonte</li>
+<li>Encaminhar para empresas especializadas em reciclagem</li>
+</ul>
+
+</section>
+
+<hr>
+
+<section id="beneficios">
+
+<h2>Benefícios da Reciclagem Eletrônica</h2>
+
+<ol>
+<li>Redução da poluição ambiental</li>
+<li>Reutilização de materiais valiosos</li>
+<li>Diminuição do lixo em aterros sanitários</li>
+<li>Promoção da consciência ambiental</li>
+</ol>
+
+</section>
+
+</main>
+
+<hr>
+
+<footer>
+
+<p>Projeto Acadêmico - EcoTech</p>
+<p>Universidade Paulista (UNIP)</p>
+<p>Curso de Ciência da Computação</p>
+
+</footer>
+<script>
+
+let index = 0;
+
+const slides = document.querySelector(".slides");
+const totalSlides = document.querySelectorAll(".slide").length;
+
+document.querySelector(".proximo").onclick = () => {
+index++;
+
+if(index >= totalSlides){
+index = 0;
+}
+
+slides.style.transform = "translateX(" + (-index * 100) + "%)";
+};
+
+document.querySelector(".anterior").onclick = () => {
+index--;
+
+if(index < 0){
+index = totalSlides - 1;
+}
+
+slides.style.transform = "translateX(" + (-index * 100) + "%)";
+};
+
+</script>
+</body>
+</html>
